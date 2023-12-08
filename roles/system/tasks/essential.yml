@@ -8,3 +8,10 @@
   package:
     name: "{{ packages }}"
     state: latest 
+
+- name: Do not stop when lid closed
+  lineinfile:
+    dest: /etc/systemd/logind.conf
+    regexp: "^#HandleLidSwitch=suspend"
+    line: "HandleLidSwitch=ignore"
+  notify: Restart Login deamon 
