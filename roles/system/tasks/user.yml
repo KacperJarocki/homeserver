@@ -4,11 +4,11 @@
     name: "{{ item }}"
   loop:
     - docker
-    - "{{ username }}"
+    - "{{ nonrootuser }}"
 
 - name: Ensure the non-root user is created
   user: 
-    name: "{{ username }}"
+    name: "{{ nonrootuser }}"
     password: "{{password | password_hash('sha512')}}"
     groups:
       - sudo

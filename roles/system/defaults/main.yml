@@ -1,5 +1,6 @@
 ---
 username: incepcja
+nonrootuser: user
 password: changeme
 shell: /bin/bash
 packages:
