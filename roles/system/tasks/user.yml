@@ -1,4 +1,11 @@
 ---
+- name: Ensure all groups are created
+  group:
+    name: "{{ item }}"
+  loop:
+    - docker
+    - "{{ username }}"
+
 - name: Ensure the non-root user is created
   user: 
     name: "{{ username }}"
