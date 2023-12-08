@@ -1,0 +1,9 @@
+username: incepcja
+packages:
+  - vim
+  - htop
+  - powertop
+  - neofetch
+  - docker
+  - docker-compose
+  - kitty
