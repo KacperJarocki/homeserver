@@ -1,4 +1,15 @@
 ---
+- name: Ensure the non-root user is created
+  user: 
+    name: "{{ username }}"
+    password: "{{password | password_hash('sha512')}}"
+    groups:
+      - sudo
+      - docker
+      - users
+    append: yes
+    shell: "{{ shell }}"
+
 - name: Enable passwordless sudo for "{{username}}"
   lineinfile:
     dest: /etc/sudoers

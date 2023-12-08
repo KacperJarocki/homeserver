@@ -1,5 +1,7 @@
 ---
 username: incepcja
+password: changeme
+shell: /bin/bash
 packages:
   - vim
   - htop
