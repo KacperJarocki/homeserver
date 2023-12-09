@@ -1,0 +1,5 @@
+---
+- name: Build Fresh Docker
+  shell: docker-compose up --build --detach
+  args:
+    chdir: /home/{{username}}/{{repository}}

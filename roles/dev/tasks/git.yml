@@ -1,0 +1,13 @@
+---
+- name: Stop Containers
+  shell: docker-compose down
+  args:
+    chdir: /home/{{username}}/{{repository}}
+
+- name: Remove Existing Repository
+  shell: rm -rf "{{ repository }}"
+
+- name: Clone Fresh Repository
+  shell: git clone https://"{{ repository_site }}""{{repository_owner}}""{{repository}}"
+  notify: Build Fresh Docker
+
