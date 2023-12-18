@@ -6,7 +6,7 @@
 
 - name: Install essential packages
   package:
-    name: "{{ packages }}"
+    name: "{{ system_packages }}"
     state: latest 
 
 - name: Do not stop when lid closed

@@ -1,9 +1,9 @@
 ---
-username: incepcja
-nonrootuser: user
-password: changeme
-shell: /bin/bash
-packages:
+system_username: incepcja
+system_nonrootuser: user
+system_password: changeme
+system_shell: /bin/bash
+system_packages:
   - vim
   - htop
   - powertop

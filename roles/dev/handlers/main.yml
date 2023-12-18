@@ -2,4 +2,4 @@
 - name: Build Fresh Docker
   shell: docker-compose up --build --detach
   args:
-    chdir: /home/{{username}}/{{repository}}
+    chdir: /home/{{ dev_username }}/{{ dev_repository }}
